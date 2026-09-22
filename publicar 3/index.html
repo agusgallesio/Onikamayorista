@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Onika Mayorista — Anteojos con estilo para tu negocio</title>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#141414"></rect><text x="50" y="66" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="46" fill="#ff2d9b">O</text></svg></template>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+body{margin:0;background:#fff;font-family:'Space Grotesk',sans-serif;color:#141414;-webkit-font-smoothing:antialiased}
+a{color:#141414;text-decoration:none}a:hover{color:#ff2d9b}
+@keyframes onkMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+input::placeholder{color:#777}
+@media (min-width:980px){html{zoom:1.15}}@media (min-width:1300px){html{zoom:1.3}}
+</style>
+</helmet>
+
+<div style="position:relative;overflow-x:hidden">
+  <!-- Marquee -->
+  <div style="border-bottom:1px solid #141414;overflow:hidden;background:#fff">
+    <div style="display:flex;width:max-content;animation:onkMarquee 30s linear infinite">
+      <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="10">
+        <div style="display:flex;align-items:center;gap:28px;padding:0 28px 0 0;height:29px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.06em;white-space:nowrap">
+          <span>{{ m }}</span><span style="color:#ff2d9b;font-size:13px">★</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header style="border-bottom:1px solid #ececec;background:#fff">
+    <div style="max-width:1000px;margin:0 auto;padding:0 20px;height:95px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <div style="width:130px;height:57px;margin-left:10px;position:relative">
+        <img src="assets/logo-transparent.png" alt="Onika" style="width:100%;height:100%;object-fit:contain;display:block">
+      </div>
+      <nav style="display:flex;gap:21px;font-size:11.5px;font-weight:500">
+        <a href="#colecciones">Colecciones</a>
+        <a href="#como-comprar">Cómo comprar</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a href="#revendedor" style="background:#141414;color:#fff;font-weight:700;font-size:10.5px;padding:0 14px;height:32px;display:flex;align-items:center;border-radius:999px;transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-2px);box-shadow:0 6px 14px rgba(20,20,20,.14)">Quiero ser revendedor</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section data-screen-label="Hero" style="background:#fff;border-bottom:1px solid #ececec">
+    <div style="max-width:1000px;margin:0 auto;padding:36px 22px 46px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:48px;align-items:center">
+      <div style="padding-top:4px">
+        <h1 style="margin:0;font-family:'Unbounded',sans-serif;font-weight:800;font-size:clamp(40px,5.2vw,51px);line-height:0.93;letter-spacing:-0.045em">Anteojos con<br>estilo<br>para tu negocio<br><span style="color:#ff2d9b;letter-spacing:-0.08em">★./</span></h1>
+        <p style="margin:26px 0 0;font-size:13.5px;line-height:1.55;color:#555;max-width:350px;text-wrap:pretty">Modelos en tendencia a <strong style="color:#333">precio mayorista</strong>, listos para revender. Y2K, streetwear y con personalidad. Para que tu vidriera se destaque.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:18px">
+          <a href="{{ waLink }}" target="_blank" style="background:#141414;color:#fff;font-weight:700;font-size:12px;height:42px;padding:0 21px;display:flex;align-items:center;border-radius:999px;transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-2px);box-shadow:0 6px 14px rgba(20,20,20,.14)">Acceder a catálogo mayorista</a>
+          <a href="#colecciones" style="border:1.5px solid #141414;color:#141414;font-weight:700;font-size:12px;height:39px;padding:0 21px;display:flex;align-items:center;border-radius:999px;transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-2px);box-shadow:0 6px 14px rgba(20,20,20,.14)">Ver colecciones</a>
+        </div>
+      </div>
+      <div style="border:1px solid #ececec;border-radius:12px;overflow:hidden;aspect-ratio:444/333;position:relative;background:#fff">
+        <image-slot id="hero-product" src="assets/prod-y2k-black-edition.png" shape="rect" fit="cover" placeholder="Foto producto hero"></image-slot>
+      </div>
+    </div>
+  </section>
+
+  <!-- Para quién es -->
+  <section data-screen-label="Para quién" style="background:#f9f9f9;border-bottom:1px solid #ececec">
+    <div style="max-width:1000px;margin:0 auto;padding:44px 22px 32px">
+      <h2 style="margin:0;text-align:center;font-family:'Unbounded',sans-serif;font-weight:800;font-size:28px;letter-spacing:-0.045em">¿Para quién es? <span style="color:#ff2d9b">★</span></h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px;margin-top:28px">
+        <sc-for list="{{ audiences }}" as="a" hint-placeholder-count="3">
+          <div style="background:#fff;border:1px solid #ececec;border-radius:12px;padding:20px 20px 30px">
+            <h3 style="margin:0 0 10px;font-family:'Unbounded',sans-serif;font-weight:800;font-size:16px;line-height:1.05;letter-spacing:-0.02em">{{ a.title }}</h3>
+            <sc-for list="{{ a.items }}" as="it" hint-placeholder-count="3">
+              <div style="display:flex;gap:6px;font-size:11.5px;color:#555;line-height:1.95"><span style="color:#ff2d9b;font-size:10px">./</span><span>{{ it }}</span></div>
+            </sc-for>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex;justify-content:center;margin-top:14px">
+        <a href="{{ waLink }}" target="_blank" style="background:#141414;color:#fff;font-weight:700;font-size:11.5px;height:36px;padding:0 20px;display:flex;align-items:center;border-radius:999px;transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-2px);box-shadow:0 6px 14px rgba(20,20,20,.14)">Pedir catálogo mayorista</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sumate -->
+  <section id="revendedor" data-screen-label="Sumate" style="background:#fff">
+    <div style="max-width:1000px;margin:0 auto;padding:43px 22px">
+      <div style="border:1px solid #ececec;border-radius:12px;overflow:hidden;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))">
+        <div style="position:relative;min-height:357px;background:#fff">
+          <image-slot id="sumate-img" src="assets/prod-y2k-strass-black-line.png" shape="rect" fit="cover" placeholder="Imagen Y2K Strass Brown / Black"></image-slot>
+        </div>
+        <form onSubmit="{{ submit }}" style="background:#f9f9f9;padding:24px 23px;display:flex;flex-direction:column;gap:10px">
+          <h2 style="margin:0;font-family:'Unbounded',sans-serif;font-weight:800;font-size:26px;letter-spacing:-0.03em">Sumate como revendedor <span style="color:#ff2d9b">★</span></h2>
+          <p style="margin:6px 0 4px;font-size:11.5px;color:#555">Dejanos tus datos y te escribimos por WhatsApp con el catálogo mayorista.</p>
+          <sc-for list="{{ fields }}" as="f" hint-placeholder-count="4">
+            <input name="{{ f.name }}" type="{{ f.type }}" placeholder="{{ f.label }}" style="height:36px;border:1px solid #e2e2e2;border-radius:8px;background:#fff;padding:0 13px;font-family:'Space Grotesk',sans-serif;font-size:11.5px;color:#141414;outline:none">
+          </sc-for>
+          <button type="submit" style="margin-top:4px;height:40px;border:0;border-radius:999px;background:#141414;color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:12px;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-2px);box-shadow:0 6px 14px rgba(20,20,20,.14)">Enviar por WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Colecciones -->
+  <section id="colecciones" data-screen-label="Colecciones" style="background:#fff;border-bottom:1px solid #ececec">
+    <div style="max-width:1000px;margin:0 auto;padding:16px 22px 34px">
+      <h2 style="margin:0;font-family:'Unbounded',sans-serif;font-weight:800;font-size:28px;letter-spacing:-0.045em">Colecciones</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px;margin-top:22px">
+        <sc-for list="{{ collections }}" as="c" hint-placeholder-count="4">
+          <div>
+            <div style="aspect-ratio:1/1;border-radius:10px;overflow:hidden;position:relative;background:#000">
+              <image-slot id="{{ c.id }}" src="{{ c.src }}" shape="rect" placeholder="{{ c.ph }}"></image-slot>
+            </div>
+            <h3 style="margin:12px 0 0;font-family:'Unbounded',sans-serif;font-weight:800;font-size:14px;letter-spacing:-0.02em">{{ c.title }}</h3>
+            <p style="margin:1px 0 0;font-size:11px;color:#666">{{ c.sub }}</p>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex;justify-content:center;margin-top:10px">
+        <a href="{{ waLink }}" target="_blank" style="border:1.5px solid #141414;color:#141414;font-weight:700;font-size:11.5px;height:35px;padding:0 20px;display:flex;align-items:center;border-radius:999px;transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-2px);box-shadow:0 6px 14px rgba(20,20,20,.14)">Contactarnos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Novedades -->
+  <section data-screen-label="Novedades" style="background:#f9f9f9;border-bottom:1px solid #ececec">
+    <div style="max-width:1000px;margin:0 auto;padding:46px 22px 0">
+      <h2 style="margin:0;font-family:'Unbounded',sans-serif;font-weight:800;font-size:28px;letter-spacing:-0.045em">Novedades <span style="color:#ff2d9b;letter-spacing:-0.08em">★./</span></h2>
+    </div>
+    <div style="display:flex;gap:12px;overflow-x:auto;padding:22px 16px 14px;margin-top:0">
+      <sc-for list="{{ products }}" as="p" hint-placeholder-count="8">
+        <div style="flex:0 0 155px">
+          <div style="width:155px;height:155px;border:1px solid #ececec;border-radius:8px;overflow:hidden;position:relative;background:#fff">
+            <image-slot id="{{ p.id }}" src="{{ p.src }}" shape="rect" fit="contain" placeholder="Producto"></image-slot>
+          </div>
+          <div style="margin-top:9px;font-weight:500;font-size:11.5px;line-height:1.3">{{ p.name }}</div>
+          <div style="margin-top:2px;font-size:11px;color:#666">Consultá precio mayorista</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display:flex;justify-content:center;padding:18px 0 38px">
+      <a href="{{ waLink }}" target="_blank" style="background:#141414;color:#fff;font-weight:700;font-size:11.5px;height:36px;padding:0 20px;display:flex;align-items:center;border-radius:999px;transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-2px);box-shadow:0 6px 14px rgba(20,20,20,.14)">Acceder a catálogo mayorista</a>
+    </div>
+  </section>
+
+  <!-- Cómo comprar -->
+  <section id="como-comprar" data-screen-label="Cómo comprar" style="background:#fff;border-bottom:1px solid #ececec">
+    <div style="max-width:1000px;margin:0 auto;padding:52px 22px 44px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center">
+        <span style="font-size:10.5px;font-weight:700;letter-spacing:0.14em;color:#ff2d9b">EN 3 PASOS</span>
+        <h2 style="margin:0;font-family:'Unbounded',sans-serif;font-weight:800;font-size:28px;letter-spacing:-0.045em">Cómo comprar <span style="color:#ff2d9b">★</span></h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:14px;margin-top:30px">
+        <sc-for list="{{ steps }}" as="s" hint-placeholder-count="3">
+          <div style="background:#f9f9f9;border:1px solid #ececec;border-radius:12px;padding:22px 20px 24px;display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <span style="font-family:'Unbounded',sans-serif;font-weight:900;font-size:44px;line-height:1;letter-spacing:-0.06em;color:#141414">0{{ s.n }}</span>
+              <span style="color:#ff2d9b;font-size:18px">★</span>
+            </div>
+            <div style="font-family:'Unbounded',sans-serif;font-weight:800;font-size:15px;letter-spacing:-0.02em">{{ s.title }}</div>
+            <div style="font-size:12.5px;line-height:1.5;color:#555;text-wrap:pretty">{{ s.text }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex;justify-content:center;margin-top:26px">
+        <a href="{{ waLink }}" target="_blank" style="background:#141414;color:#fff;font-weight:700;font-size:12px;height:40px;padding:0 22px;display:flex;align-items:center;border-radius:999px;transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-2px);box-shadow:0 6px 14px rgba(20,20,20,.14)">Pedir catálogo mayorista</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Por qué Onika -->
+  <section data-screen-label="Por qué Onika" style="background:#f9f9f9;border-bottom:1px solid #ececec">
+    <div style="max-width:1000px;margin:0 auto;padding:42px 22px 32px">
+      <h2 style="margin:0;text-align:center;font-family:'Unbounded',sans-serif;font-weight:800;font-size:28px;letter-spacing:-0.045em">Por qué Onika</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:22px;margin:26px auto 0;max-width:720px">
+        <sc-for list="{{ reasons }}" as="r" hint-placeholder-count="3">
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px">
+            <div style="color:#ff2d9b;font-size:22px;line-height:1;height:22px">{{ r.icon }}</div>
+            <div style="font-size:11.5px;font-weight:500;line-height:1.45;color:#333">{{ r.text }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex;justify-content:center;margin-top:14px">
+        <a href="{{ waLink }}" target="_blank" style="background:#141414;color:#fff;font-weight:700;font-size:11.5px;height:36px;padding:0 20px;display:flex;align-items:center;border-radius:999px;transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-2px);box-shadow:0 6px 14px rgba(20,20,20,.14)">Contactarnos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA final -->
+  <section data-screen-label="CTA" style="background:#fff;border-bottom:1px solid #ececec">
+    <div style="max-width:1000px;margin:0 auto;padding:50px 22px 48px;display:flex;flex-direction:column;align-items:center;text-align:center">
+      <h2 style="margin:0;max-width:480px;font-family:'Unbounded',sans-serif;font-weight:800;font-size:clamp(28px,4vw,34px);line-height:1.1;letter-spacing:-0.03em">¿Querés vender Onika en tu local? <span style="color:#ff2d9b">★</span></h2>
+      <p style="margin:22px 0 0;font-size:13px;color:#555">Escribinos y te mandamos el catálogo mayorista completo.</p>
+      <a href="{{ waLink }}" target="_blank" style="margin-top:16px;background:#141414;color:#fff;font-weight:700;font-size:13px;height:42px;padding:0 25px;display:flex;align-items:center;border-radius:999px;transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-2px);box-shadow:0 6px 14px rgba(20,20,20,.14)">Acceder a catálogo mayorista</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contacto" style="background:#fff">
+    <div style="max-width:1000px;margin:0 auto;padding:38px 22px 70px;display:flex;flex-direction:column;gap:6px;font-size:11.5px">
+      <div style="width:92px;height:40px;position:relative;margin:0 0 18px 0">
+        <img src="assets/logo-transparent.png" alt="Onika" style="width:100%;height:100%;object-fit:contain;display:block">
+      </div>
+      <a href="{{ waLink }}" target="_blank" style="color:#141414">WhatsApp +54 9 11 3354-2078</a>
+      <a href="https://instagram.com/onika.style" target="_blank" style="color:#141414">Instagram @onika.style</a>
+      <span style="color:#666">[email@placeholder.com]</span>
+      <span style="color:#666">Ramos Mejía, Buenos Aires</span>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a href="{{ waLink }}" target="_blank" aria-label="WhatsApp" style="position:fixed;right:26px;bottom:14px;width:46px;height:46px;border-radius:50%;background:#141414;display:flex;align-items:center;justify-content:center;z-index:10;box-shadow:0 4px 14px rgba(0,0,0,0.18);transition:transform .18s ease,box-shadow .18s ease" style-hover="transform:translateY(-2px);box-shadow:0 6px 14px rgba(20,20,20,.14)">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 20.5l1.3-4.2A8.5 8.5 0 1 1 8 19.3z"></path><path d="M9 8.5c0 3.5 2.8 6.5 6.5 6.5l1-1.5-2-1-1 .8c-1.2-.5-2.3-1.6-2.8-2.8l.8-1-1-2z" fill="#fff" stroke="none"></path></svg>
+  </a>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const base = ['VENTA MAYORISTA', 'MÍNIMO [X] UNIDADES', 'ENVÍOS A TODO EL PAÍS', 'DESPACHO EN MENOS DE 24 HS HÁBILES'];
+    const phone = '5491133542078';
+    const waLink = `https://wa.me/${phone}?text=${encodeURIComponent('Hola, quiero conocer el catálogo Mayorista de Onika')}`;
+    return {
+      waLink,
+      marquee: [...base, ...base, ...base, ...base],
+      audiences: [
+        { title: 'Locales de ropa y accesorios', items: ['Sumá un producto que tus clientes ya buscan', 'Fácil de exhibir, alta rotación', 'Combina con tu góndola de accesorios'] },
+        { title: 'Revendedores y emprendedores', items: ['Empezá sin necesitar stock enorme', 'Margen pensado para reventa', 'Pedís por WhatsApp, sin vueltas'] },
+        { title: 'Ópticas y showrooms', items: ['Modelos con onda para tu vidriera', 'Variedad de acetatos y colores', 'Fotocromáticos y armazones para recetados'] }
+      ],
+      fields: [
+        { name: 'nombre', type: 'text', label: 'Nombre' },
+        { name: 'empresa', type: 'text', label: 'Empresa' },
+        { name: 'telefono', type: 'tel', label: 'Número de teléfono' },
+        { name: 'correo', type: 'email', label: 'Correo' }
+      ],
+      submit: (e) => {
+        e.preventDefault();
+        const d = new FormData(e.target);
+        const msg = `Hola, quiero conocer el catálogo Mayorista de Onika\nNombre: ${d.get('nombre')}\nEmpresa: ${d.get('empresa')}\nTeléfono: ${d.get('telefono')}\nCorreo: ${d.get('correo')}`;
+        window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
+      },
+      collections: [
+        { id: 'col-basic', src: 'assets/col-basic.png', ph: 'Línea Basic', title: 'Línea Basic', sub: 'Los clásicos que nunca fallan' },
+        { id: 'col-premium', src: 'assets/col-premium.png', ph: 'Línea Premium', title: 'Línea Premium', sub: 'Terminaciones y detalles top' },
+        { id: 'col-foto', src: 'assets/col-foto.png', ph: 'Fotocromáticos', title: 'Fotocromáticos', sub: 'Cambian de color con el sol' },
+        { id: 'col-armazones', src: 'assets/col-armazones.png', ph: 'Armazones', title: 'Armazones', sub: 'Para armar con receta' }
+      ],
+      products: [
+        ['Y2K Strass Black · patilla Print','prod-y2k-strass-black-print'],
+        ['Y2K Strass Black · patilla Line','prod-y2k-strass-black-line'],
+        ['Y2K Black Edition','prod-y2k-black-edition'],
+        ['Oni-BB Plateado','p-oni-bb-plateado'],
+        ['Armazón Venom Clear Grey','p-venom-clear-grey'],
+        ['Armazón Venom Caramel','p-venom-caramel'],
+        ['Armazón Lexxy Black','prod-lexxy-black'],
+        ['Armazón Boxy Clear Grey','prod-boxy-clear-grey'],
+        ['Armazón Boxy Black','prod-boxy-black'],
+        ['Ethereal Nude','prod-ethereal-nude'],
+        ['Divine-D','prod-divine-d'],
+        ['Swag Clear','prod-swag-clear']
+      ].map(([name, f]) => ({ id: 'nov-' + f, name, src: 'assets/' + f + '.png' })),
+      steps: [
+        { n: '1', title: 'Pedí el catálogo', text: 'Escribinos por WhatsApp y te mandamos el catálogo mayorista.' },
+        { n: '2', title: 'Armá tu pedido', text: 'Desde [X] unidades. Podés combinar modelos y colores.' },
+        { n: '3', title: 'Recibilo', text: 'Pagás y despachamos en menos de 24 hs hábiles a todo el país.' }
+      ],
+      reasons: [
+        { icon: '★', text: 'Modelos en tendencia que se renuevan todo el tiempo' },
+        { icon: './', text: 'Despacho en menos de 24 hs hábiles' },
+        { icon: '★', text: 'Atención directa por WhatsApp, sin intermediarios' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
